@@ -283,7 +283,13 @@
             <td class="tag">Serveur Cypherix → Anthropic</td>
           </tr>
           <tr>
-            <td>Identifiant publicitaire de l'appareil</td>
+            <td>Sujet saisi (texte libre) et identifiant d'installation aléatoire</td>
+            <td>Vous utilisez le générateur d'exercices (Pack Étude)</td>
+            <td>Générer l'exercice et limiter l'usage à 30 exercices par jour et par installation</td>
+            <td class="tag">Serveur Cypherix (identifiant et sujet) → Anthropic (sujet seulement)</td>
+          </tr>
+          <tr>
+            <td>Identifiant publicitaire de l'appareil ; AdMob peut aussi utiliser l'adresse IP, les interactions avec les annonces et des données de diagnostic</td>
             <td>Vous n'avez acheté aucun pack (bannière affichée), ou vous regardez une publicité avec récompense</td>
             <td>Affichage et mesure des publicités</td>
             <td class="tag">Google AdMob</td>
@@ -315,12 +321,12 @@
         </tbody>
       </table>
     </div>
-    <p class="muted">Aucun compte utilisateur n'existe à ce jour dans l'application : rien n'identifie personnellement un utilisateur auprès de nos serveurs. Si une synchronisation multi-appareils est introduite ultérieurement (fonctionnalité envisagée dans la feuille de route), cette politique sera mise à jour avant son activation.</p>
+    <p class="muted">Aucun compte utilisateur n'existe à ce jour dans l'application. Pour la résolution et la correction par l'IA, l'application n'envoie aucun identifiant avec votre énoncé ou vos photos. Seul le générateur d'exercices envoie un identifiant d'installation : un code aléatoire créé au premier usage, conservé sur votre téléphone jusqu'à la désinstallation de l'application ou l'effacement de ses données, et qui n'est relié ni à votre nom ni à un compte. Notre serveur ne le garde qu'en mémoire, pour compter les exercices du jour : il ne l'écrit dans aucun fichier ni base de données, et le compteur disparaît au redémarrage du serveur. Si une synchronisation multi-appareils est introduite ultérieurement (fonctionnalité envisagée dans la feuille de route), cette politique sera mise à jour avant son activation.</p>
   </section>
 
   <section id="base-legale">
     <h2><span class="num">03</span> Base légale et conservation</h2>
-    <p>Le traitement des énoncés soumis à l'IA repose sur l'exécution du service que vous demandez explicitement (l'intérêt légitime d'exécuter la fonctionnalité que vous venez d'activer).</p>
+    <p>Le traitement des énoncés soumis à l'IA sert uniquement à fournir la fonction que vous demandez explicitement.</p>
     <p>Les énoncés envoyés à l'IA ne sont conservés sur notre serveur que le temps nécessaire à générer la réponse, puis supprimés ; ils ne sont pas utilisés pour ré-entraîner un modèle. Votre historique local reste sur votre appareil jusqu'à ce que vous le supprimiez vous-même ou désinstalliez l'application.</p>
   </section>
 
@@ -354,7 +360,7 @@
 
   <section id="droits">
     <h2><span class="num">08</span> Vos droits</h2>
-    <p>Conformément à la loi fédérale suisse sur la protection des données (nLPD) et, le cas échéant, au RGPD si vous résidez dans l'Union européenne, vous disposez d'un droit d'accès, de rectification, d'effacement, d'opposition et de portabilité sur vos données. Comme l'application ne conserve pas d'identifiant qui vous relie personnellement à un énoncé transmis à l'IA, ce droit s'exerce principalement sur les données publicitaires et sur toute correspondance que vous nous adressez directement.</p>
+    <p>Conformément à la loi fédérale suisse sur la protection des données (nLPD) et, le cas échéant, au RGPD si vous résidez dans l'Union européenne, vous disposez d'un droit d'accès, de rectification, d'effacement, d'opposition et de portabilité sur vos données. Pour la résolution et la correction par l'IA, l'application n'envoie aucun identifiant avec votre énoncé ou vos photos. Pour le générateur d'exercices, l'identifiant d'installation aléatoire (voir section 2) n'est relié ni à votre nom ni à un compte, et notre serveur ne le garde qu'en mémoire. Ce droit s'exerce donc principalement sur les données publicitaires (détenues par Google, voir section 4) et sur toute correspondance que vous nous adressez directement.</p>
     <p>Vous pouvez déposer une réclamation auprès du Préposé fédéral à la protection des données et à la transparence (PFPDT) en Suisse, ou de l'autorité de protection des données de votre pays de résidence dans l'UE.</p>
   </section>
 
@@ -378,8 +384,8 @@
     <p style="margin-bottom:6px;">Pour toute question sur vos données, cette politique, ou pour demander la suppression de vos données auprès de Cypherix :</p>
     <p style="margin-bottom:16px;"><code>contact.cypherix89@gmail.com</code></p>
     <p style="margin-bottom:6px;"><b>Procédure :</b> envoyez-nous un e-mail à l'adresse ci-dessus en précisant votre demande de suppression. Nous confirmons la suppression sous 30 jours.</p>
-    <p style="margin-bottom:6px;"><b>Ce qui est supprimé sur demande :</b> toute correspondance que vous nous avez adressée, et l'association de l'identifiant publicitaire de votre appareil à Cypherix (retrait de la mesure publicitaire).</p>
-    <p style="margin-bottom:0;"><b>Ce qui n'est pas concerné :</b> les énoncés soumis à l'assistant IA ne sont jamais conservés au-delà du temps de traitement de votre demande (quelques secondes), il n'y a donc rien à supprimer a posteriori sur ce point. L'historique de vos achats est conservé exclusivement par Apple ou Google, qui le gèrent selon leurs propres règles — Cypherix n'y a pas accès et ne peut pas le supprimer en votre nom ; adressez-vous directement à Apple ou Google pour ces données.</p>
+    <p style="margin-bottom:6px;"><b>Ce qui est supprimé sur demande :</b> toute correspondance que vous nous avez adressée. Cypherix ne conserve rien d'autre qui vous concerne : l'identifiant d'installation du générateur d'exercices n'existe qu'en mémoire sur notre serveur (il disparaît au redémarrage du serveur) et sur votre téléphone (il disparaît avec la désinstallation de l'application ou l'effacement de ses données). Les erreurs techniques sont écrites dans les journaux de notre hébergeur, Render.</p>
+    <p style="margin-bottom:0;"><b>Ce qui n'est pas concerné :</b> les énoncés soumis à l'assistant IA ne sont jamais conservés au-delà du temps de traitement de votre demande (quelques secondes), il n'y a donc rien à supprimer a posteriori sur ce point. L'historique de vos achats est conservé exclusivement par Apple ou Google, qui le gèrent selon leurs propres règles — Cypherix n'y a pas accès et ne peut pas le supprimer en votre nom ; adressez-vous directement à Apple ou Google pour ces données. L'identifiant publicitaire de votre appareil est lui aussi détenu par Google, et non par Cypherix : vous pouvez le réinitialiser ou le supprimer dans les paramètres Android (voir section 4), Cypherix ne peut pas le supprimer à votre place.</p>
   </div>
 
 </div>
