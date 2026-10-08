@@ -236,7 +236,7 @@
     <h2>En bref</h2>
     <ul>
       <li>La plupart des calculs se font entièrement sur votre appareil — rien n'est envoyé nulle part.</li>
-      <li>Quand vous utilisez l'assistant IA (résolution ou correction d'un exercice), l'énoncé ou la photo de votre brouillon est envoyé à notre serveur puis à notre prestataire d'intelligence artificielle, uniquement pour générer la réponse.</li>
+      <li>Quand vous utilisez l'assistant IA (résolution ou correction d'un exercice, génération d'exercices), l'énoncé, la photo de votre brouillon ou le sujet saisi est envoyé à notre serveur puis à notre prestataire d'intelligence artificielle, uniquement pour générer la réponse. Seul le générateur d'exercices envoie aussi un identifiant d'installation aléatoire, qui sert à limiter l'usage.</li>
       <li>Vos achats sont gérés entièrement par Apple ou Google — nous ne voyons jamais vos moyens de paiement.</li>
       <li>Si vous n'avez acheté aucun pack, une bannière publicitaire s'affiche ; quel que soit votre statut, vous pouvez aussi regarder une publicité avec récompense. L'identifiant publicitaire de votre appareil peut alors être utilisé par Google AdMob.</li>
       <li>Votre historique de calculs reste stocké localement sur votre appareil, pas sur nos serveurs.</li>
@@ -322,12 +322,13 @@
       </table>
     </div>
     <p class="muted">Aucun compte utilisateur n'existe à ce jour dans l'application. Pour la résolution et la correction par l'IA, l'application n'envoie aucun identifiant avec votre énoncé ou vos photos. Seul le générateur d'exercices envoie un identifiant d'installation : un code aléatoire créé au premier usage, conservé sur votre téléphone jusqu'à la désinstallation de l'application ou l'effacement de ses données, et qui n'est relié ni à votre nom ni à un compte. Notre serveur ne le garde qu'en mémoire, pour compter les exercices du jour : il ne l'écrit dans aucun fichier ni base de données, et le compteur disparaît au redémarrage du serveur. Si une synchronisation multi-appareils est introduite ultérieurement (fonctionnalité envisagée dans la feuille de route), cette politique sera mise à jour avant son activation.</p>
+    <p class="muted">Comme pour tout accès à Internet, l'adresse IP de l'appareil est visible des services que l'application contacte directement : notre serveur (hébergé par Render), Google (AdMob et formulaire de consentement) et le service de taux de change, ainsi que Canny lorsque vous ouvrez le tableau d'idées dans votre navigateur. Anthropic reçoit les requêtes depuis notre serveur, et non directement depuis votre appareil.</p>
   </section>
 
   <section id="base-legale">
     <h2><span class="num">03</span> Base légale et conservation</h2>
     <p>Le traitement des énoncés soumis à l'IA sert uniquement à fournir la fonction que vous demandez explicitement.</p>
-    <p>Les énoncés envoyés à l'IA ne sont conservés sur notre serveur que le temps nécessaire à générer la réponse, puis supprimés ; ils ne sont pas utilisés pour ré-entraîner un modèle. Votre historique local reste sur votre appareil jusqu'à ce que vous le supprimiez vous-même ou désinstalliez l'application.</p>
+    <p>Notre serveur ne stocke lui-même ni les énoncés, ni les photos, ni les sujets d'exercice : il les transmet à Anthropic pour générer la réponse, sans les écrire dans un fichier ni dans une base de données. Notre code n'écrit pas non plus ces contenus, ni l'identifiant d'installation, dans les journaux de l'hébergeur ; en cas d'erreur, il y écrit seulement l'erreur technique reçue. Pour Anthropic, le traitement et la conservation des données suivent ses propres conditions pour son API. Selon les conditions d'Anthropic pour son API, ces données ne sont pas utilisées par défaut pour entraîner ses modèles. Votre historique local reste sur votre appareil jusqu'à ce que vous le supprimiez vous-même ou désinstalliez l'application.</p>
   </section>
 
   <section id="publicites">
@@ -345,8 +346,8 @@
   <section id="destinataires">
     <h2><span class="num">06</span> À qui ces données sont transmises</h2>
     <ul class="plain">
-      <li><b>Anthropic</b> (fournisseur du modèle d'intelligence artificielle Claude) — reçoit l'énoncé/la photo au moment de la résolution ou correction, dans le seul but de produire la réponse.</li>
-      <li><b>Render</b> (hébergeur du service serveur de Cypherix) — achemine cette même requête vers Anthropic ; n'a pas d'autre accès à vos données.</li>
+      <li><b>Anthropic</b> (fournisseur du modèle d'intelligence artificielle Claude) — reçoit l'énoncé/la photo au moment de la résolution ou correction, et le sujet saisi dans le générateur d'exercices, dans le seul but de produire la réponse ou l'exercice.</li>
+      <li><b>Render</b> (hébergeur du service serveur de Cypherix) — fait fonctionner notre serveur, qui reçoit ces requêtes (énoncé, photo, ou sujet et identifiant d'installation du générateur d'exercices) et les achemine vers Anthropic ; n'a pas d'autre accès à vos données.</li>
       <li><b>Google AdMob</b> — reçoit l'identifiant publicitaire de l'appareil pour l'affichage des publicités : la bannière, uniquement si aucun pack n'a été acheté, et la publicité avec récompense, quel que soit votre statut.</li>
       <li><b>Apple / Google</b> — traitent directement vos achats intégrés ; nous ne recevons d'eux qu'une confirmation que l'achat a eu lieu, jamais vos moyens de paiement.</li>
     </ul>
@@ -355,7 +356,7 @@
 
   <section id="transferts">
     <h2><span class="num">07</span> Transferts hors de Suisse / UE</h2>
-    <p>Anthropic et Render sont des sociétés basées aux États-Unis : l'énoncé que vous soumettez à l'assistant IA transite donc hors de Suisse et de l'Union européenne au moment de son traitement. Ce transfert est limité au contenu strictement nécessaire à la fonctionnalité demandée, pour la durée la plus courte possible (voir section 3).</p>
+    <p>Anthropic et Render sont des sociétés basées aux États-Unis : l'énoncé, la photo ou le sujet d'exercice que vous soumettez à l'assistant IA transite donc hors de Suisse et de l'Union européenne au moment de son traitement. Ce transfert est limité au contenu strictement nécessaire à la fonctionnalité demandée, pour la durée la plus courte possible (voir section 3).</p>
   </section>
 
   <section id="droits">
@@ -384,8 +385,8 @@
     <p style="margin-bottom:6px;">Pour toute question sur vos données, cette politique, ou pour demander la suppression de vos données auprès de Cypherix :</p>
     <p style="margin-bottom:16px;"><code>contact.cypherix89@gmail.com</code></p>
     <p style="margin-bottom:6px;"><b>Procédure :</b> envoyez-nous un e-mail à l'adresse ci-dessus en précisant votre demande de suppression. Nous confirmons la suppression sous 30 jours.</p>
-    <p style="margin-bottom:6px;"><b>Ce qui est supprimé sur demande :</b> toute correspondance que vous nous avez adressée. Cypherix ne conserve rien d'autre qui vous concerne : l'identifiant d'installation du générateur d'exercices n'existe qu'en mémoire sur notre serveur (il disparaît au redémarrage du serveur) et sur votre téléphone (il disparaît avec la désinstallation de l'application ou l'effacement de ses données). Les erreurs techniques sont écrites dans les journaux de notre hébergeur, Render.</p>
-    <p style="margin-bottom:0;"><b>Ce qui n'est pas concerné :</b> les énoncés soumis à l'assistant IA ne sont jamais conservés au-delà du temps de traitement de votre demande (quelques secondes), il n'y a donc rien à supprimer a posteriori sur ce point. L'historique de vos achats est conservé exclusivement par Apple ou Google, qui le gèrent selon leurs propres règles — Cypherix n'y a pas accès et ne peut pas le supprimer en votre nom ; adressez-vous directement à Apple ou Google pour ces données. L'identifiant publicitaire de votre appareil est lui aussi détenu par Google, et non par Cypherix : vous pouvez le réinitialiser ou le supprimer dans les paramètres Android (voir section 4), Cypherix ne peut pas le supprimer à votre place.</p>
+    <p style="margin-bottom:6px;"><b>Ce qui est supprimé sur demande :</b> toute correspondance que vous nous avez adressée. Notre serveur ne conserve lui-même rien d'autre qui vous concerne : l'identifiant d'installation du générateur d'exercices n'existe qu'en mémoire sur notre serveur (il disparaît au redémarrage du serveur) et sur votre téléphone (il disparaît avec la désinstallation de l'application ou l'effacement de ses données). Les erreurs techniques sont écrites dans les journaux de notre hébergeur, Render : notre code n'y écrit ni énoncé, ni photo, ni sujet, ni identifiant d'installation, mais l'hébergeur applique en outre ses propres conditions pour ses journaux d'infrastructure.</p>
+    <p style="margin-bottom:0;"><b>Ce qui n'est pas concerné :</b> notre serveur ne stocke lui-même ni les énoncés, ni les photos, ni les sujets d'exercice soumis à l'IA, il n'a donc rien à supprimer a posteriori sur ce point. Chez Anthropic, le traitement et la conservation des données suivent ses propres conditions pour son API ; adressez-vous directement à Anthropic pour ces données. L'historique de vos achats est conservé exclusivement par Apple ou Google, qui le gèrent selon leurs propres règles — Cypherix n'y a pas accès et ne peut pas le supprimer en votre nom ; adressez-vous directement à Apple ou Google pour ces données. L'identifiant publicitaire de votre appareil est lui aussi détenu par Google, et non par Cypherix : vous pouvez le réinitialiser ou le supprimer dans les paramètres Android (voir section 4), Cypherix ne peut pas le supprimer à votre place.</p>
   </div>
 
 </div>
