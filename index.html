@@ -239,7 +239,7 @@
       <li>Quand vous utilisez l'assistant IA (résolution ou correction d'un exercice, génération d'exercices), l'énoncé, le texte et les photos de votre tentative, ou le sujet choisi dans une liste, sont envoyés à notre serveur puis à notre prestataire d'intelligence artificielle, uniquement pour générer la réponse. Seul le générateur d'exercices envoie aussi un identifiant d'installation aléatoire, qui sert à limiter l'usage.</li>
       <li>Vos achats sont gérés entièrement par Google Play — nous ne voyons jamais vos moyens de paiement.</li>
       <li>Tant que vous n'avez acheté ni pack, ni Cypherix Illimité, ni « Suppression de la publicité », une bannière publicitaire s'affiche ; l'achat de crédits IA seul ne la retire pas. Quel que soit votre statut, une publicité avec récompense peut aussi vous être proposée : elle est demandée à Google dès que la proposition s'affiche, mais n'est montrée que si vous la lancez. L'identifiant publicitaire de votre appareil peut alors être utilisé par Google AdMob.</li>
-      <li>Votre historique de calculs reste stocké localement sur votre appareil, pas sur nos serveurs.</li>
+      <li>Votre historique de calculs, vos crédits IA, le nombre de publicités avec récompense regardées, l'identifiant d'installation et les réponses de l'IA que vous signalez sont stockés localement sur votre appareil, pas sur nos serveurs (seul le générateur d'exercices envoie l'identifiant d'installation à notre serveur, qui ne le garde qu'en mémoire). Un signalement n'est pas envoyé : il reste sur votre appareil.</li>
       <li>Vous pouvez nous contacter à tout moment pour accéder à vos données ou demander leur suppression.</li>
     </ul>
   </div>
@@ -277,8 +277,8 @@
         </thead>
         <tbody>
           <tr>
-            <td>Énoncé d'un problème (texte ou photos), texte et photos de votre tentative</td>
-            <td>Vous utilisez « Résoudre » ou « Vérifier ma démarche »</td>
+            <td>Énoncé d'un problème (texte ou photos), texte et photos de votre tentative ; pour « Vérifier ma tentative », l'exercice généré et le texte de votre tentative ; avec chaque demande, la langue de l'application, le modèle d'IA souhaité et, pour la résolution et la correction, le mode choisi (Piste ou Réponse)</td>
+            <td>Vous utilisez « Résoudre », « Vérifier ma démarche » ou, dans le générateur d'exercices, « Vérifier ma tentative »</td>
             <td>Générer la résolution ou localiser votre erreur</td>
             <td class="tag">Serveur Cypherix → Anthropic</td>
           </tr>
@@ -301,22 +301,22 @@
             <td class="tag">Google Play uniquement</td>
           </tr>
           <tr>
-            <td>Historique de calculs</td>
+            <td>Historique de calculs, crédits IA, nombre de publicités avec récompense regardées, identifiant d'installation, réponses de l'IA que vous signalez</td>
             <td>Utilisation normale de l'app</td>
-            <td>Retrouver vos calculs précédents</td>
-            <td class="tag">Reste sur l'appareil</td>
+            <td>Retrouver vos calculs précédents, appliquer les crédits et les limites de publicités, garder vos signalements</td>
+            <td class="tag">Reste sur l'appareil (un signalement n'est pas envoyé ; l'identifiant d'installation est aussi envoyé par le générateur d'exercices, voir plus haut)</td>
           </tr>
           <tr>
             <td>Langue et format régional des nombres</td>
             <td>Premier lancement</td>
             <td>Afficher l'app dans la bonne langue/format</td>
-            <td class="tag">Détectés localement ; le code de langue est envoyé avec chaque requête IA</td>
+            <td class="tag">Détectés localement ; le code de langue est envoyé avec chaque requête IA, avec le modèle d'IA souhaité et, pour la résolution et la correction, le mode choisi (Piste ou Réponse)</td>
           </tr>
           <tr>
             <td>Taux de change</td>
             <td>Mode Finance / conversion de devises</td>
             <td>Afficher un taux à jour</td>
-            <td class="tag">Requête anonyme à un service de taux</td>
+            <td class="tag">open.er-api.com : seul le code de la devise de départ est envoyé, sans donnée personnelle ni identifiant</td>
           </tr>
         </tbody>
       </table>
@@ -348,9 +348,11 @@
     <ul class="plain">
       <li><b>Anthropic</b> (fournisseur du modèle d'intelligence artificielle Claude) — reçoit l'énoncé, ainsi que le texte et les photos de la tentative, au moment de la résolution ou de la correction, et le sujet choisi dans le générateur d'exercices, dans le seul but de produire la réponse ou l'exercice.</li>
       <li><b>Render</b> (hébergeur du service serveur de Cypherix) — fait fonctionner notre serveur, qui reçoit ces requêtes (énoncé, texte et photos de la tentative, ou sujet et identifiant d'installation du générateur d'exercices) et les achemine vers Anthropic ; n'a pas d'autre accès à vos données.</li>
-      <li><b>Google AdMob</b> — reçoit l'identifiant publicitaire de l'appareil pour l'affichage des publicités : la bannière, tant que ni pack, ni Cypherix Illimité, ni « Suppression de la publicité » n'a été acheté (l'achat de crédits IA seul ne la retire pas), et la publicité avec récompense, quel que soit votre statut, demandée dès que la proposition s'affiche et montrée seulement si vous la lancez.</li>
+      <li><b>Google AdMob</b> — reçoit l'identifiant publicitaire de l'appareil et peut utiliser votre adresse IP, des informations sur vos interactions avec les annonces et des données de diagnostic, pour l'affichage des publicités : la bannière, tant que ni pack, ni Cypherix Illimité, ni « Suppression de la publicité » n'a été acheté (l'achat de crédits IA seul ne la retire pas), et la publicité avec récompense, quel que soit votre statut, demandée dès que la proposition s'affiche et montrée seulement si vous la lancez.</li>
+      <li><b>Formulaire de consentement de Google</b> (User Messaging Platform) — interrogé à chaque lancement pour savoir si votre consentement est requis, il affiche le formulaire si nécessaire et voit l'adresse IP de l'appareil (voir section 04).</li>
       <li><b>Google Play</b> — traite directement vos achats intégrés ; nous n'en recevons qu'une confirmation que l'achat a eu lieu, jamais vos moyens de paiement.</li>
       <li><b>open.er-api.com</b> (service public de taux de change) — reçoit le code de la devise de départ lorsque vous utilisez la conversion de devises, sans donnée personnelle ni identifiant.</li>
+      <li><b>Canny</b> (canny.io, service tiers) — seulement si vous ouvrez le tableau d'idées : il s'ouvre dans votre navigateur, qui contacte Canny directement ; l'application n'envoie aucune donnée à Canny (voir section 05).</li>
     </ul>
     <p>Aucune de ces données n'est vendue à des tiers à des fins de revente.</p>
   </section>
