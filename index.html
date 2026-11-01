@@ -238,7 +238,7 @@
       <li>La plupart des calculs se font entièrement sur votre appareil — rien n'est envoyé nulle part.</li>
       <li>Quand vous utilisez l'assistant IA (résolution ou correction d'un exercice, génération d'exercices), l'énoncé, le texte et les photos de votre tentative, ou le sujet choisi dans une liste, sont envoyés à notre serveur puis à notre prestataire d'intelligence artificielle, uniquement pour générer la réponse. Seul le générateur d'exercices envoie aussi un identifiant d'installation aléatoire, qui sert à limiter l'usage.</li>
       <li>Vos achats sont gérés entièrement par Google Play — nous ne voyons jamais vos moyens de paiement.</li>
-      <li>Si vous n'avez acheté aucun pack, une bannière publicitaire s'affiche ; quel que soit votre statut, vous pouvez aussi regarder une publicité avec récompense. L'identifiant publicitaire de votre appareil peut alors être utilisé par Google AdMob.</li>
+      <li>Tant que vous n'avez acheté ni pack, ni Cypherix Illimité, ni « Suppression de la publicité », une bannière publicitaire s'affiche ; l'achat de crédits IA seul ne la retire pas. Quel que soit votre statut, une publicité avec récompense peut aussi vous être proposée : elle est demandée à Google dès que la proposition s'affiche, mais n'est montrée que si vous la lancez. L'identifiant publicitaire de votre appareil peut alors être utilisé par Google AdMob.</li>
       <li>Votre historique de calculs reste stocké localement sur votre appareil, pas sur nos serveurs.</li>
       <li>Vous pouvez nous contacter à tout moment pour accéder à vos données ou demander leur suppression.</li>
     </ul>
@@ -278,7 +278,7 @@
         <tbody>
           <tr>
             <td>Énoncé d'un problème (texte ou photos), texte et photos de votre tentative</td>
-            <td>Vous utilisez « Résoudre » ou « Corriger ma démarche »</td>
+            <td>Vous utilisez « Résoudre » ou « Vérifier ma démarche »</td>
             <td>Générer la résolution ou localiser votre erreur</td>
             <td class="tag">Serveur Cypherix → Anthropic</td>
           </tr>
@@ -290,13 +290,13 @@
           </tr>
           <tr>
             <td>Identifiant publicitaire de l'appareil ; AdMob peut aussi utiliser l'adresse IP, les interactions avec les annonces et des données de diagnostic</td>
-            <td>Vous n'avez acheté aucun pack (bannière affichée), ou vous regardez une publicité avec récompense</td>
+            <td>Vous n'avez acheté ni pack, ni Cypherix Illimité, ni « Suppression de la publicité » (bannière affichée), ou une publicité avec récompense vous est proposée (demandée dès que la proposition s'affiche, montrée seulement si vous la lancez)</td>
             <td>Affichage et mesure des publicités</td>
             <td class="tag">Google AdMob</td>
           </tr>
           <tr>
             <td>Détails de paiement, historique d'achat</td>
-            <td>Vous achetez un pack ou des crédits IA</td>
+            <td>Vous achetez un pack, Cypherix Illimité, « Suppression de la publicité » ou des crédits IA</td>
             <td>Traitement de la transaction</td>
             <td class="tag">Google Play uniquement</td>
           </tr>
@@ -322,7 +322,7 @@
       </table>
     </div>
     <p class="muted">Aucun compte utilisateur n'existe à ce jour dans l'application. Pour la résolution et la correction par l'IA, l'application n'envoie aucun identifiant avec votre énoncé, votre tentative ou vos photos. Seul le générateur d'exercices envoie un identifiant d'installation : un code aléatoire créé au premier lancement de l'application, conservé sur votre téléphone jusqu'à la désinstallation de l'application ou l'effacement de ses données, et qui n'est relié ni à votre nom ni à un compte. Notre serveur ne le garde qu'en mémoire, pour compter les exercices du jour : il ne l'écrit dans aucun fichier ni base de données, et le compteur disparaît au redémarrage du serveur. Si une synchronisation multi-appareils est introduite ultérieurement (fonctionnalité envisagée dans la feuille de route), cette politique sera mise à jour avant son activation.</p>
-    <p class="muted">Comme pour tout accès à Internet, l'adresse IP de l'appareil est visible des services que l'application contacte directement : notre serveur (hébergé par Render), Google (AdMob et formulaire de consentement) et le service de taux de change, ainsi que Canny lorsque vous ouvrez le tableau d'idées dans votre navigateur. Anthropic reçoit les requêtes depuis notre serveur, et non directement depuis votre appareil.</p>
+    <p class="muted">Comme pour tout accès à Internet, l'adresse IP de l'appareil est visible des services que l'application contacte directement : notre serveur (hébergé par Render), Google (AdMob, formulaire de consentement et Google Play pour les achats) et le service de taux de change, ainsi que Canny lorsque vous ouvrez le tableau d'idées dans votre navigateur. Anthropic reçoit les requêtes depuis notre serveur, et non directement depuis votre appareil.</p>
   </section>
 
   <section id="base-legale">
@@ -333,7 +333,7 @@
 
   <section id="publicites">
     <h2><span class="num">04</span> Publicités et consentement</h2>
-    <p>Si vous n'avez acheté aucun pack, l'application affiche une bannière publicitaire. Quel que soit votre statut, elle peut aussi vous proposer, à votre initiative, une publicité avec récompense en échange d'un crédit IA. Ces publicités sont fournies par Google AdMob. Pour les afficher, AdMob peut utiliser l'identifiant publicitaire de votre appareil, votre adresse IP, des informations sur vos interactions avec les annonces et des données de diagnostic.</p>
+    <p>Tant que vous n'avez acheté ni pack, ni Cypherix Illimité, ni « Suppression de la publicité », l'application affiche une bannière publicitaire ; l'achat de crédits IA seul ne la retire pas. Quel que soit votre statut, elle peut aussi vous proposer une publicité avec récompense en échange d'un crédit IA : elle est demandée à Google dès que la proposition s'affiche, mais n'est montrée que si vous la lancez. Ces publicités sont fournies par Google AdMob. Pour les afficher, AdMob peut utiliser l'identifiant publicitaire de votre appareil, votre adresse IP, des informations sur vos interactions avec les annonces et des données de diagnostic.</p>
     <p>Dans l'Espace économique européen, au Royaume-Uni et en Suisse, l'application vous demande votre consentement avant d'afficher des publicités personnalisées, au moyen d'un formulaire de Google (User Messaging Platform). Le traitement lié aux publicités personnalisées repose sur ce consentement. Vous pouvez modifier votre choix à tout moment depuis les Réglages de l'application (Options de confidentialité, lorsque cette option est proposée). Si vous refusez, aucune publicité personnalisée ne vous est proposée. Des publicités non personnalisées peuvent toutefois continuer de s'afficher (bannière et publicité avec récompense). Le formulaire de Google vous permet aussi de gérer ces choix en détail. Vous pouvez aussi réinitialiser ou supprimer l'identifiant publicitaire dans les paramètres Android.</p>
     <p>Le nombre de publicités avec récompense regardées est compté sur votre appareil afin d'appliquer des limites quotidiennes et mensuelles.</p>
   </section>
@@ -348,7 +348,7 @@
     <ul class="plain">
       <li><b>Anthropic</b> (fournisseur du modèle d'intelligence artificielle Claude) — reçoit l'énoncé, ainsi que le texte et les photos de la tentative, au moment de la résolution ou de la correction, et le sujet choisi dans le générateur d'exercices, dans le seul but de produire la réponse ou l'exercice.</li>
       <li><b>Render</b> (hébergeur du service serveur de Cypherix) — fait fonctionner notre serveur, qui reçoit ces requêtes (énoncé, texte et photos de la tentative, ou sujet et identifiant d'installation du générateur d'exercices) et les achemine vers Anthropic ; n'a pas d'autre accès à vos données.</li>
-      <li><b>Google AdMob</b> — reçoit l'identifiant publicitaire de l'appareil pour l'affichage des publicités : la bannière, uniquement si aucun pack n'a été acheté, et la publicité avec récompense, quel que soit votre statut.</li>
+      <li><b>Google AdMob</b> — reçoit l'identifiant publicitaire de l'appareil pour l'affichage des publicités : la bannière, tant que ni pack, ni Cypherix Illimité, ni « Suppression de la publicité » n'a été acheté (l'achat de crédits IA seul ne la retire pas), et la publicité avec récompense, quel que soit votre statut, demandée dès que la proposition s'affiche et montrée seulement si vous la lancez.</li>
       <li><b>Google Play</b> — traite directement vos achats intégrés ; nous n'en recevons qu'une confirmation que l'achat a eu lieu, jamais vos moyens de paiement.</li>
       <li><b>open.er-api.com</b> (service public de taux de change) — reçoit le code de la devise de départ lorsque vous utilisez la conversion de devises, sans donnée personnelle ni identifiant.</li>
     </ul>
@@ -357,7 +357,7 @@
 
   <section id="transferts">
     <h2><span class="num">07</span> Transferts hors de Suisse / UE</h2>
-    <p>Anthropic et Render sont des sociétés basées aux États-Unis : l'énoncé, le texte et les photos de votre tentative, ou le sujet d'exercice choisi, que vous soumettez à l'assistant IA transitent donc hors de Suisse et de l'Union européenne au moment de son traitement. Ce transfert est limité au contenu strictement nécessaire à la fonctionnalité demandée. Notre serveur ne stocke ni les énoncés, ni les tentatives, ni les photos (voir section 3) ; leur conservation chez Anthropic dépend de ses propres conditions pour son API. Google (AdMob et formulaire de consentement) est également une société basée aux États-Unis : les données publicitaires décrites en section 4 peuvent donc elles aussi être traitées hors de Suisse et de l'Union européenne, selon les conditions de Google.</p>
+    <p>Anthropic et Render sont des sociétés basées aux États-Unis : l'énoncé, le texte et les photos de votre tentative, ou le sujet d'exercice choisi, que vous soumettez à l'assistant IA transitent donc hors de Suisse et de l'Union européenne au moment de leur traitement. Ce transfert est limité au contenu strictement nécessaire à la fonctionnalité demandée. Notre serveur ne stocke ni les énoncés, ni les tentatives, ni les photos (voir section 3) ; leur conservation chez Anthropic dépend de ses propres conditions pour son API. Google (AdMob et formulaire de consentement) est également une société basée aux États-Unis : les données publicitaires décrites en section 4 peuvent donc elles aussi être traitées hors de Suisse et de l'Union européenne, selon les conditions de Google.</p>
   </section>
 
   <section id="droits">
